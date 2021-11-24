@@ -6,7 +6,7 @@ The basic goal of democracy is for people to be able to "vote" for candidates wh
 
 Some of the problems that are faced by people in physical voting are:
 
-1. People either do not leave the area where they are registered as a voter or they do not go to the poll center because of any other reason.
+1. People either do not get a chance to leave for the area where they are registered as a voter or they do not go to the poll center because of any other reason.
 1. Individual can change the program installed in the EVM and can tamper the results after the polling for the favor of the candidate
 1. Rigging is the most common problem faced by the election commission of India. In which an individual cast more than one vote in a different constituency.
 
