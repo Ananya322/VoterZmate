@@ -8,7 +8,7 @@ Some of the problems that are faced by people in physical voting are:
 
 1. People either do not get a chance to cast their vote as their registered polling location differs from their current living location or they do not go to the polling center at all.
 1. Individual might change the program installed in the EVM and can tamper with the electoral results.
-1. Rigging is the most common problem faced by the election commission of India. In which an individual cast more than one vote in a different constituency.
+1. Rigging is the most common problem faced by the election commission of India in which an individual can cast more than one vote in a different constituency.
 
 ### **OUR GOAL:**
 
