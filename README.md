@@ -26,4 +26,4 @@ or download https://github.com/thisisadi/VoterZmate this repository.
 - Now open the cloned repository in Android Studio and wait for the gradle build to finish and resources to be downloaded as well as indexing of files to be completed. 
 
 
-- Now build the project and run it in an emulator or your own device.
+- Now build the project and run it on an emulator or your own device.
