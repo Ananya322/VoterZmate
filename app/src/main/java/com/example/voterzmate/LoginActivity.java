@@ -44,7 +44,6 @@ public class LoginActivity extends AppCompatActivity {
         progressDialog = new ProgressDialog(this);
         mAuth = FirebaseAuth.getInstance();
         mUser = mAuth.getCurrentUser();
-
         sign_up_but.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -72,7 +71,7 @@ public class LoginActivity extends AppCompatActivity {
             password_but.requestFocus();
         }
         else {
-            progressDialog.setMessage("logging In...");
+            progressDialog.setMessage("Logging In...");
             progressDialog.setTitle("Login");
             progressDialog.setCanceledOnTouchOutside(false);
             progressDialog.show();
@@ -95,7 +94,7 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
     private boolean isSignedIn() {
-        if (FirebaseAuth.getInstance().getCurrentUser()!=null && FingerprintActivity.key == 1)
+        if (FirebaseAuth.getInstance().getCurrentUser()!=null)
         {
             return true;
         }

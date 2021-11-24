@@ -103,6 +103,7 @@ public class RegisterActivity extends AppCompatActivity {
                         user.put("fName",NAME);
                         user.put("email",EMAIL);
                         user.put("aadhaar",AADHAAR);
+                        user.put("voteCount","null");
                         documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void unused) {

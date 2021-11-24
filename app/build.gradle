@@ -50,4 +50,5 @@ dependencies {
     implementation 'com.google.firebase:firebase-database:20.0.2'
     implementation "androidx.biometric:biometric:1.1.0"
     implementation 'com.google.firebase:firebase-firestore:24.0.0'
+    implementation  'com.firebase:firebase-client-android:2.5.2'
 }

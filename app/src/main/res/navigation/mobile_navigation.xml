@@ -25,6 +25,6 @@
     <fragment
         android:id="@+id/nav_aboutUs"
         android:name="com.example.voterzmate.ui.aboutUs.AboutUs"
-        android:label="About us"
+        android:label="About Us"
         tools:layout="@layout/fragment_slideshow" />
 </navigation>

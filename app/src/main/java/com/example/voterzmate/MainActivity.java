@@ -3,7 +3,12 @@ package com.example.voterzmate;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.View;
+import android.widget.TextView;
+
 import com.google.android.material.navigation.NavigationView;
+
+import androidx.annotation.Nullable;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -13,12 +18,19 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.voterzmate.databinding.ActivityMainBinding;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
 
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
-
+    FirebaseAuth fAuth;
+    FirebaseFirestore fStore;
+    String userID;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +57,23 @@ public class MainActivity extends AppCompatActivity {
             i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(i);
             return true;
+        });
+        NavigationView navigation_View = (NavigationView) findViewById(R.id.nav_view);
+        View hView =  navigation_View.getHeaderView(0);
+        TextView profile_name = (TextView)hView.findViewById(R.id.profile_name);
+        fAuth = FirebaseAuth.getInstance();
+        fStore = FirebaseFirestore.getInstance();
+        userID = fAuth.getCurrentUser().getUid();
+
+        DocumentReference documentReference = fStore.collection("users").document(userID);
+        documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
+            @Override
+            public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException error) {
+                if(error==null) // If condition, so that app doesn't crash upon signing out the user.
+                {
+                    profile_name.setText(documentSnapshot.getString("fName"));
+                }
+            }
         });
 
     }

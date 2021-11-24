@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -16,6 +17,8 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
+
+import java.util.Objects;
 
 
 public class HomeFragment extends Fragment {
@@ -32,7 +35,7 @@ public class HomeFragment extends Fragment {
 
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
-        userID = fAuth.getCurrentUser().getUid();
+        userID = Objects.requireNonNull(fAuth.getCurrentUser()).getUid();
 
         DocumentReference documentReference = fStore.collection("users").document(userID);
         documentReference.addSnapshotListener(getActivity(), new EventListener<DocumentSnapshot>() {
@@ -41,7 +44,7 @@ public class HomeFragment extends Fragment {
                 if(error==null) // If condition, so that app doesn't crash upon signing out the user.
                 {
                     name.setText(documentSnapshot.getString("fName"));
-                    aadhaar.setText(documentSnapshot.getString("aadhaar"));
+                    aadhaar.setText(documentSnapshot.getString("aadhaar")+" (Aadhaar Number)");
                     email.setText(documentSnapshot.getString("email"));
                 }
             }

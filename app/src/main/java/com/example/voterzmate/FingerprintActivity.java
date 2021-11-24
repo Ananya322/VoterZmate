@@ -18,7 +18,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
-
 import java.util.concurrent.Executor;
 
 public class FingerprintActivity extends AppCompatActivity {
@@ -27,7 +26,6 @@ public class FingerprintActivity extends AppCompatActivity {
     private BiometricPrompt.PromptInfo promptInfo;
     private ImageView fingerprint;
     private static final int REQUEST_CODE = 1;
-    public static int key = 0;
     @RequiresApi(api = Build.VERSION_CODES.R)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,9 +80,7 @@ public class FingerprintActivity extends AppCompatActivity {
             public void onAuthenticationSucceeded(
                     @NonNull BiometricPrompt.AuthenticationResult result) {
                 super.onAuthenticationSucceeded(result);
-                key = 1;
-                Toast.makeText(getApplicationContext(),
-                        "Authentication succeeded!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Authentication succeeded!", Toast.LENGTH_SHORT).show();
                 Intent i = new Intent(FingerprintActivity.this,MainActivity.class);
                 i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(i);
