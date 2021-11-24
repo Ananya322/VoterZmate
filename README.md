@@ -27,3 +27,7 @@ or download https://github.com/thisisadi/VoterZmate this repository.
 
 
 - Now build the project and run it on an emulator or your own device.
+
+
+### **FIGMA UI LINK:**
+https://www.figma.com/file/7UJuayUPSAXzJxtg9ZGW57/crypto-j?node-id=0%3A1
