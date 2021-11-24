@@ -4,7 +4,7 @@
 
 The basic goal of democracy is for people to be able to "vote" for candidates who will establish an efficient administration that will meet their needs and requests and enhance their level of living. 
 
-Some of the problems that are faced by people in online voting are:
+Some of the problems that are faced by people in physical voting are:
 
 1. People either do not leave the area where they are registered as a voter or they do not go to the poll center because of any other reason.
 1. Individual can change the program installed in the EVM and can tamper the results after the polling for the favor of the candidate
