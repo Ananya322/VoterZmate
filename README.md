@@ -33,7 +33,7 @@ or download https://github.com/thisisadi/VoterZmate this repository.
 https://www.figma.com/file/7UJuayUPSAXzJxtg9ZGW57/crypto-j?node-id=0%3A1
 
 ### **FIGMA PROTOTYPE:**
-https://www.figma.com/proto/7UJuayUPSAXzJxtg9ZGW57/crypto-j?node-id=150%3A866&scaling=scale-down&page-id=0%3A1&starting- point-node-id=150%3A1016
+https://www.figma.com/proto/7UJuayUPSAXzJxtg9ZGW57/crypto-j?node-id=150%3A866&scaling=scale-down&page-id=0%3A1&starting-point-node-id=150%3A1016
 
 ### **CANVA LINK:**
 https://www.canva.com/design/DAEqpYMTXDA/1Fts1HxWOLclCa03AZj_GQ/viewutm_content=DAEqpYMTXDA&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton
